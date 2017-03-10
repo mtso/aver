@@ -5,28 +5,29 @@ Assertion library for Go.
 ## Usage
 
 Example usage in a *_test.go file:
+```go
+import (
+	"testing"
+	"github.com/mtso/aver"
+)
 
-	import (
-		"testing"
-		"github.com/mtso/aver"
-	)
+func TestExample(t *testing.T) {
+	// Create a new Averrer instance
+	aver := aver.New(t)
+
+	// FAIL the test with Errorf
+	expected := "expectedString"
+	actual := "actualString"
+	aver(expected).ToEqual(actual)
 	
-	func TestExample(t *testing.T) {
-		// Create a new Averrer instance
-		aver := aver.New(t)
-
-		// FAIL the test with Errorf
-		expected := "expectedString"
-		actual := "actualString"
-		aver(expected).ToEqual(actual)
-		
-		// Store the returned Averrable in a variable
-		isEven := aver(true)
-		actual1 := 1 % 2 == 0 // false
-		actual2 := 2 % 2 == 0 // true
-		isEven.ToNotEqual(actual1)
-		isEven.ToEqual(actual2)
-	}
+	// Store the returned Averrable in a variable
+	isEven := aver(true)
+	actual1 := 1 % 2 == 0 // false
+	actual2 := 2 % 2 == 0 // true
+	isEven.ToNotEqual(actual1)
+	isEven.ToEqual(actual2)
+}
+```
 
 ## Aver is Expect
 
