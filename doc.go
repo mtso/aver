@@ -28,8 +28,8 @@
 // Aver is Expect
 // 
 // Aver (Expect) assertions allow you to compare two values in a test.
-// aver.New(t *testing.T) returns a new Averring function.
-// The Averring function accepts an "expected" value as a parameter and returns
+// aver.New(t *testing.T) returns a new Averrer function.
+// The Averrer function accepts an "expected" value as a parameter and returns
 // an Aver object that conforms to the Averrable interface. The Aver
 // object stores the expected value and a reference to the testing.T instance.
 // The Aver object can then be called with an Averrable function to compare
