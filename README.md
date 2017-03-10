@@ -20,7 +20,7 @@ Example usage in a *_test.go file:
 		actual := "actualString"
 		aver(expected).ToEqual(actual)
 		
-		// Store the Aver object in a variable
+		// Store the returned Averrable in a variable
 		isEven := aver(true)
 		actual1 := 1 % 2 == 0 // false
 		actual2 := 2 % 2 == 0 // true
